@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+    * {
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+    }
+    
+    .Navbar li a {
+        font-family: "Monteserrat", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        display: inline-block;
+        color: white;
+        list-style: none;
+        text-decoration: none;
+        transition: all 0.3s ease 0s;
+    }
+    
+    .Navbar li a:hover {
+        background-color: grey;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+        padding: 15px 10px;
+        background-color: rgb(9, 9, 9);
+    }
+    
+    .Navbar li {
+        display: inline-block;
+        padding: 0px 20px;
+    }
+    
+    .Nabvar li a:hover {
+        color: black;
+    }
+    
+    .cta button {
+        padding: 5px 25px;
+        background-color: lawngreen;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    
+    .cta button:hover {
+        background-color: green;
+    }
+    
+    .Head_sub {
+        font-family: "Monteserrat", sans-serif;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    
+    .Head_sub h1 {
+        padding: 10px 10px;
+    }
+    
+    .Head_sub h2 {
+        padding: 10px 10px;
+        opacity: 60%;
+    }
+    /* Pregnancies */
+    
+    .Pregnancies {
+        width: 60%;
+        margin: 5% 5%;
+        position: relative;
+    }
+    
+    #Pregnancies_slider {
+        -webkit-appearance: none;
+        background: black;
+        width: 100%;
+        height: 10%;
+        margin-left: 5%;
+        margin-top: 3%;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: 0.3s;
+        transition: opacity 0.2s;
+        border-radius: 12px;
+        box-shadow: 0px 1px 10px 1px red;
+    }
+    
+    #Pregnancies_slider_value {}
+</style>
+<script>
+    // Pregnancies
+    var Pregnancies_slider_value = document.getElementById("Pregnancies_slider_value")
+    var Pregnancies_slider = document.getElementById("Pregnancies_slider")
+    Pregnancies_slider.innerHTML = Pregnancies_slider_value;
+</script>
+
+<body>
+    <header>
+        <!-- Navigation bar (start)-->
+        <nav>
+            <ul class="Navbar">
+                <li id="Home"> <a href="#">Home</a> </li>
+                <li id="Info"> <a href="#">Info</a> </li>
+            </ul>
+        </nav>
+        <a class="cta" href="#"> <button> Contact </button> </a>
+        <!-- Navigation bar (end)-->
+    </header>
+    <main>
+        <div class="Head_sub">
+            <h1 id="Heading">Diabetes Predicting Model</h1>
+            <h2 id="Sub">Warning! Not to be used without reading the info page. The model is not for all and has been designed for only for specific type of people. Moreover, if possible consulting a doctor should be preferred over the model. If situations are not
+                favourable, you can count on the prediction</h2>
+        </div>
+        <div class="Pregnancies">
+            Number of Pregnancies
+            <input type="range" min="0" max="15" value="2" id="Pregnancies_slider">
+            <div id="Pregnancies_slider_value">
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
